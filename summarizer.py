@@ -4,9 +4,11 @@ import nltk
 import re
 import urllib.request
 
+# User input for url of webpage
+user_url = str(input('Enter the webpage that you want to summarize:  '))
 
 # Obtaining the webpage
-scraped_data = urllib.request.urlopen('https://www.reuters.com/article/us-tesla-musk-sec/musk-to-resign-as-tesla-chairman-remain-as-ceo-in-sec-settlement-idUSKCN1M90SY')
+scraped_data = urllib.request.urlopen(user_url)
 article = scraped_data.read()
 
 # Parsing article
